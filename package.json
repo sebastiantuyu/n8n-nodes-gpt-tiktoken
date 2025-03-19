@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-gpt-tokenizer",
+  "name": "n8n-nodes-gpt-tiktoken",
   "version": "0.1.1",
   "description": "n8n node for working with BPE Tokens with OpenAI's GPT models in mind.",
   "keywords": [
@@ -12,15 +12,15 @@
     "tokenizer"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://sebastiantuyu.com",
   "author": {
-    "name": "geckse",
-    "email": "mail@geckse.de",
-    "homepage": "https://geckse.de"
+    "name": "sebastiantuyu",
+    "email": "contact@sebastiantuyu.com",
+    "homepage": "https://sebastiantuyu.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/geckse/n8n-nodes-gpt-tokenizer.git"
+    "url": "https://github.com/sebastiantuyu/n8n-nodes-gpt-tiktoken.git"
   },
   "main": "index.js",
   "scripts": {
