@@ -10,7 +10,12 @@ import {
 	encode,
 	decode,
 	isWithinTokenLimit
-  } from 'gpt-tokenizer'
+  } from 'gpt-tokenizer';
+
+import { Tiktoken } from "js-tiktoken/lite";
+import o200k_base from "js-tiktoken/dist/ranks/o200k_base";
+
+const enc = new Tiktoken(o200k_base);
 
 export class GptTokenizer implements INodeType {
 	description: INodeTypeDescription = {
@@ -196,7 +201,7 @@ export class GptTokenizer implements INodeType {
 					);
 
 					if(!destinationKey) destinationKey = 'tokenCount';
-					item.json[destinationKey] = encode(inputString).length;
+					item.json[destinationKey] = enc.encode(inputString).length;
 				} else if (operation == 'isWithinTokenLimit'){
 					if(typeof inputString !== 'string') throw new NodeOperationError(
 						this.getNode(),
